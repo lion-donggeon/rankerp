@@ -5,7 +5,16 @@ from ..models import Question
 from django.db.models import Q
 
 
+import logging
+logger = logging.getLogger('main')
+
+
+
 def index(request):
+
+    logger.info("INFO 레벨로 출력")
+
+
     """
     main 목록 출력
     """
