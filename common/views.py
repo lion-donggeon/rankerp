@@ -28,8 +28,3 @@ def page_not_found(request, exception):
     return render(request, 'common/404.html', {})
 
 
-def server_error(request, exception):
-    """
-    500 server_error
-    """
-    return render(request, 'common/500.html', {})
