@@ -7,3 +7,8 @@
     color:#999;
     font-size: 11px;
 }
+
+.write {
+    text-align:right; 
+    padding-bottom: 10px;
+}

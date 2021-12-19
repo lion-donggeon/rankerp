@@ -9,9 +9,14 @@
             <div class="input-group-append">
                 <button class="btn btn-outline-secondary" type="button" id="btn_search">찾기</button>
             </div>
-          </div>
-    </div>
+        </div>
 
+        
+    </div>
+    
+    <div class="write">
+        <a href="{% url 'main:question_create' %}" class="btn btn-primary">쓰기</a>
+    </div>
     <table class="table">
         <tbody>
         {% if question_list %}
@@ -84,7 +89,7 @@
         {% endif %}
     </ul>
     <!-- 페이징처리 끝 -->
-    <a href="{% url 'main:question_create' %}" class="btn btn-primary">질문 등록하기</a>
+    
 </div>
 <form id="searchForm" method="get" action="{% url 'index' %}">
     <input type="hidden" id="kw" name="kw" value="{{ kw|default_if_none:'' }}">
