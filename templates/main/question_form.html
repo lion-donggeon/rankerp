@@ -17,7 +17,6 @@
             </div>
         {% endif %}
         <!-- 오류표시 End -->
-        <!-- 
         <div class="form-group">
             <label for="subject">제목</label>
             <input type="text" class="form-control" name="subject" id="subject"
@@ -28,8 +27,6 @@
             <textarea class="form-control" name="content"
                       id="content" rows="10">{{ form.content.value|default_if_none:'' }}</textarea>
         </div>
-        -->
-        {{form.as_p}}
 
         <button type="submit" class="btn btn-primary">저장하기</button>
     </form>
