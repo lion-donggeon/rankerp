@@ -43,7 +43,7 @@
             </td>
             <td>{{ question.author.username }}</td>  <!-- 글쓴이 추가 -->
             {% if question.create_date|date:'d' == today|date:'d' %}
-            <td>{{today|date:'H:i'}}</td>
+            <td>{{question.create_date|date:'H:i'}}</td>
             {% else %}
             <td>{{ question.create_date|date:'Y.m.d' }}</td>
             {% endif %}
