@@ -196,3 +196,12 @@ LOGGING = {
         },
     }
 }
+
+# Sumernote 필수 설정
+X_FRAME_OPTIONS = 'SAMEORIGIN'
+
+INSTALLED_APPS += ['django_summernote']
+
+import os
+MEDIA_URL = '/media/'
+MEDIA_ROOT = os.path.join(BASE_DIR, 'media/')

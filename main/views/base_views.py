@@ -4,6 +4,8 @@ from django.shortcuts import render, get_object_or_404
 from ..models import Question
 from django.db.models import Q
 
+from django.utils import timezone
+
 
 import logging
 logger = logging.getLogger('main')
@@ -18,6 +20,8 @@ def index(request):
     """
     main 목록 출력
     """
+    #현재 날짜
+    today = timezone.now()
 
     # 입력 파라미터
     page = request.GET.get('page', '1')  # 페이지
@@ -37,7 +41,7 @@ def index(request):
     paginator = Paginator(question_list, 10)  # 페이지당 10개씩 보여주기
     page_obj = paginator.get_page(page)
 
-    context = {'question_list': page_obj, 'page': page, 'kw': kw}
+    context = {'question_list': page_obj, 'page': page, 'kw': kw, 'today': today}
     return render(request, 'main/question_list.html', context)
 
 def detail(request, question_id):

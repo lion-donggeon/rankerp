@@ -11,6 +11,7 @@
             </div>
         </div>
     </div>
+
     <table class="table">
         <thead>
         <tr class="text-center thead-dark">
@@ -41,7 +42,11 @@
                 {% endif %}
             </td>
             <td>{{ question.author.username }}</td>  <!-- 글쓴이 추가 -->
-            <td>{{ question.create_date }}</td>
+            {% if question.create_date|date:'d' == today|date:'d' %}
+            <td>{{today|date:'H:i'}}</td>
+            {% else %}
+            <td>{{ question.create_date|date:'Y.m.d' }}</td>
+            {% endif %}
         </tr>
         {% endfor %}
         {% else %}
@@ -109,6 +114,9 @@ $(document).ready(function(){
         $("#page").val(1);  // 검색버튼을 클릭할 경우 1페이지부터 조회한다.
         $("#searchForm").submit();
     });
+
+
+    var today = time
 });
 </script>
 {% endblock %}
