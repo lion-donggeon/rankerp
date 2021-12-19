@@ -6,16 +6,10 @@ from django_summernote.widgets import SummernoteWidget
 
 class QuestionForm(forms.ModelForm):
 
-    content = SummernoteWidget()
-
     class Meta:
         model = Question  # 사용할 모델
         fields = ['subject', 'content', 'image']  # QuestionForm에서 사용할 Question 모델의 속성
        
-        widgets = {
-            'content': SummernoteWidget(),
-        }
-        
         labels = {
             'subject': '제목',
             'content': '내용',
