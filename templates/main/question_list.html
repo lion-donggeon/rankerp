@@ -23,13 +23,20 @@
                 {% if question.answer_set.count > 0 %}
                 <span class="text-danger small ml-2">{{ question.answer_set.count }}</span>
                 {% endif %}
+                <!-- 작성자 / 작성일 / 조회 -->
+                <p class="listInfo">
+                    <span>{{ question.author.username }} |</span>
+                    <span>
+                        {% if question.create_date|date:'d' == today|date:'d' %}
+                          {{question.create_date|date:'H:i'}}
+                        {% else %}
+                          {{ question.create_date|date:'Y.m.d' }}
+                        {% endif %}
+                    </span>
+                </p>
             </td>
-            <!-- 작성일 -->
-            {% if question.create_date|date:'d' == today|date:'d' %}
-            <td>{{question.create_date|date:'H:i'}}</td>
-            {% else %}
-            <td>{{ question.create_date|date:'Y.m.d' }}</td>
-            {% endif %}
+            
+            
         </tr>
         {% endfor %}
         {% else %}

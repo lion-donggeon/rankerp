@@ -2,3 +2,8 @@
     border-top:dotted 1px #ddd;
     font-size:0.7em;
 }
+
+.listInfo {
+    color:#999;
+    font-size: 11px;
+}
