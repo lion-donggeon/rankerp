@@ -8,7 +8,7 @@ from django.utils import timezone
 
 # Create your views here.
 
-def list(request, category):
+def list(request, category='main'):
 
     """
     main 목록 출력
