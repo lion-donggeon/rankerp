@@ -15,7 +15,7 @@
     </div>
     
     <div class="write">
-        <a href="{% url 'main:question_create' %}" class="btn btn-primary">쓰기</a>
+        <a href="{% url 'main:question_create' category %}" class="btn btn-primary">쓰기</a>
     </div>
     <table class="table">
         <tbody>
@@ -47,7 +47,7 @@
         {% endfor %}
         {% else %}
         <tr>
-            <td colspan="3">질문이 없습니다.</td>
+            <td colspan="3">지금이 기회입니다. 첫번째 글을 써보세요 !</td>
         </tr>
         {% endif %}
         </tbody>

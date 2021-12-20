@@ -11,10 +11,10 @@
                 <a class="nav-link" href="{% url 'post:list' category='free' %}">자유게시판</a>
             </li>
             <li>
-                <a class="nav-link" href="{% url 'main:index' %}">선물게시판</a>
+                <a class="nav-link" href="{% url 'post:list' category='main' %}">선물게시판</a>
             </li>
             <li>
-                <a class="nav-link" href="{% url 'main:index' %}">NFT게시판</a>
+                <a class="nav-link" href="{% url 'post:list' category='nft' %}">NFT게시판</a>
             </li>
             <li class="nav-item ">
                 {% if user.is_authenticated %}
