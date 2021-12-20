@@ -10,7 +10,9 @@ from django.utils import timezone
 import logging
 logger = logging.getLogger('main')
 
-
+def home(request):
+    
+    return render(request, 'main/question_list.html')
 
 def index(request):
 

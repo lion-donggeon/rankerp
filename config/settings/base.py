@@ -32,6 +32,7 @@ ALLOWED_HOSTS = ['15.165.73.177', '127.0.0.1', 'rankerp.io']
 # Application definition
 
 INSTALLED_APPS = [
+    'post.apps.PostConfig',
     'common.apps.CommonConfig',
     'main.apps.MainConfig',
     'django.contrib.admin',

@@ -4,11 +4,11 @@ from .views import base_views, question_views, answer_views, comment_views, vote
 app_name = 'main'
 
 urlpatterns = [
-   # base_views.py
-    path('',
-         base_views.index, name='index'),
-    path('<int:question_id>/',
-         base_views.detail, name='detail'),
+     # base_views.py     
+     path('',
+          base_views.index, name='index'),
+     path('<int:question_id>/',
+          base_views.detail, name='detail'),
 
     # question_views.py
     path('question/create/',
